@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <h3>Editar un Contacto</h3>
 
 <%= form_for(@contacto, url: "/enc_contactos/#{@enc_contacto.id}/contactos/#{@contacto.id}" , html: {method: "patch"}) do |f| %>

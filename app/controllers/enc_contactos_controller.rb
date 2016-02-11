@@ -54,7 +54,12 @@ class EncContactosController < ApplicationController
   # DELETE /enc_contactos/1
   # DELETE /enc_contactos/1.json
   def destroy
+   @enc_contacto.contactos.each do |contacto|
+       contacto.destroy
+
+   end
     @enc_contacto.destroy
+
     respond_to do |format|
       format.html { redirect_to enc_contactos_url, notice: 'Enc contacto was successfully destroyed.' }
       format.json { head :no_content }
