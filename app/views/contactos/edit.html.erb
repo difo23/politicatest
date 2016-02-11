@@ -1,0 +1,62 @@
+<h3>Editar un Contacto</h3>
+
+<%= form_for(@contacto, url: "/enc_contactos/#{@enc_contacto.id}/contactos/#{@contacto.id}" , html: {method: "patch"}) do |f| %>
+
+
+
+
+   <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono %>
+  </div>
+  <div class="field">
+    <%= f.label :mesa %><br>
+    <%= f.text_field :mesa %>
+  </div>
+  <div class="field">
+    <%= f.label :paraje %><br>
+    <%= f.text_field :paraje %>
+  </div>
+
+    <div class="field">
+    <%= f.label :edad %><br>
+    <%= f.text_field :edad %>
+  </div>
+<div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+<div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.text_field :sexo %>
+  </div>
+<div class="field">
+    <%= f.label :fecha_ultimo_contacto %><br>
+    <%= f.date_select :fecha_ultimo_contacto %>
+  </div>
+<div class="field">
+    <%= f.label :intencion %><br>
+    <%= f.check_box :intesion %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>

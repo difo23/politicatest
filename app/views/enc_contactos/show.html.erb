@@ -66,8 +66,8 @@
           <td><%= contacto.sexo %></td>
           <td><%= contacto.intesion %></td>
         <td><%= contacto.fecha_ultimo_contacto %></td>
-        <td><%= link_to 'Edit', enc_contactos_path %></td>
-        <td><%= link_to 'Destroy', enc_contactos_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}/edit" %></td>
+          <td><%= link_to 'Destroy', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
     <% end %>
@@ -137,5 +137,5 @@
 
 
 
-<%= link_to 'Edit', edit_enc_contacto_path(@enc_contacto) %> |
+
 <%= link_to 'Back', enc_contactos_path %>
