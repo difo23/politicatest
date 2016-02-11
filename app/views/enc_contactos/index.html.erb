@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Enc Contactos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Cedula</th>
+      <th>Celular</th>
+      <th>Telefono</th>
+      <th>Mesa</th>
+      <th>Paraje</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @enc_contactos.each do |enc_contacto| %>
+      <tr>
+        <td><%= enc_contacto.nombre %></td>
+        <td><%= enc_contacto.apellido %></td>
+        <td><%= enc_contacto.cedula %></td>
+        <td><%= enc_contacto.celular %></td>
+        <td><%= enc_contacto.telefono %></td>
+        <td><%= enc_contacto.mesa %></td>
+        <td><%= enc_contacto.paraje %></td>
+        <td><%= link_to 'Show', enc_contacto %></td>
+        <td><%= link_to 'Edit', edit_enc_contacto_path(enc_contacto) %></td>
+        <td><%= link_to 'Destroy', enc_contacto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Enc contacto', new_enc_contacto_path %>
