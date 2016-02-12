@@ -21,8 +21,7 @@ class Contacto < ActiveRecord::Base
   #validates :bio, length: { maximum: 500 }
   #validates :password, length: { in: 6..20 }
   #validates :registration_number, length: { is: 6 }
-    validates_format_of :email,
-with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/
+
     validates :mesa, presence: true,
                     length: { is: 4 }
 end

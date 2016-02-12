@@ -31,7 +31,15 @@ class ContactosController < ApplicationController
     def create
         @enc_contacto = EncContacto.find(params[:enc_contacto_id])
         @contacto = @enc_contacto.contactos.create(contacto_params)
-        redirect_to enc_contacto_path(@enc_contacto)
+
+        if @contacto.id != nil
+                redirect_to enc_contacto_path(@enc_contacto), notice: 'contacto was successfully created.'
+      else
+
+            redirect_to enc_contacto_path(@enc_contacto), error: 'Contacto error, puede ser: la cedula ya fue registrada o cedula caracteres != 11 o mesa caracteres != 4 o sexo M o F.'
+      end
+
+
   end
 
     def destroy
