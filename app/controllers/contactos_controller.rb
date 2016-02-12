@@ -1,5 +1,5 @@
 class ContactosController < ApplicationController
-
+    http_basic_authenticate_with name: "difo", password: "difo", only: :destroy
  def index
 
   end
@@ -14,14 +14,14 @@ class ContactosController < ApplicationController
 
     def update
         @contacto = Contacto.find(params[:id])
-      @enc_contacto = EncContacto.find(params[:enc_contacto_id])
+        @enc_contacto = EncContacto.find(params[:enc_contacto_id])
         respond_to do |format|
           if @contacto.update(contacto_params)
               format.html { redirect_to @enc_contacto, notice: 'Contacto was successfully updated.' }
               format.json { render :show, status: :ok, location: @enc_contacto }
           else
             format.html { render :edit }
-            format.json { render json: @contacto.errors, status: :unprocessable_entity }
+              format.json { render json: @enc_contacto.errors, status: :unprocessable_entity }
           end
         end
       end
@@ -37,7 +37,7 @@ class ContactosController < ApplicationController
     def destroy
 
     @contacto = Contacto.find(params[:id])
-        @enc_contacto = EncContacto.find(params[:enc_contacto_id])
+    @enc_contacto = EncContacto.find(params[:enc_contacto_id])
     @contacto.destroy
     respond_to do |format|
         format.html { redirect_to enc_contacto_path(@enc_contacto), notice: 'Contacto was successfully destroyed.' }

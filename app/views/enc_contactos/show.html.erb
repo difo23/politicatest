@@ -30,12 +30,104 @@
 
   </tbody>
 </table>
+<h3>Agregar un Contacto</h3>
+<%= form_for([@enc_contacto, (contacto=@enc_contacto.contactos.build)]) do |f| %>
 
-<h2>Contactos</h2>
+<% if contacto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contacto.errors.count, "error") %> prohibited this contacto from being saved:</h2>
+
+      <ul>
+      <% contacto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 <table>
   <thead>
+  </thead>
+
+  <tbody>
+
+      <tr>
+        <td>  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre ,size: 15 %>
+  </div></td>
+        <td><div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido ,size: 15 %>
+  </div></td>
+        <td> <div class="field">
+    <%= f.label :cedula %><br>
+    <%= f.text_field :cedula ,size: 11 %>
+  </div></td>
+        <td> <div class="field">
+    <%= f.label :celular %><br>
+    <%= f.text_field :celular ,size: 10 %>
+  </div></td>
+        <td><div class="field">
+    <%= f.label :telefono %><br>
+    <%= f.text_field :telefono,size: 10 %>
+  </div></td>
+        <td><div class="field">
+    <%= f.label :mesa %><br>
+    <%= f.text_field :mesa ,size: 4 %>
+  </div></td>
+        <td><div class="field">
+    <%= f.label :paraje %><br>
+    <%= f.text_field :paraje ,size: 15 %>
+  </div></td>
+          <td><div class="field">
+    <%= f.label :edad %><br>
+    <%= f.text_field :edad, size: 2 %>
+  </div></td>
+
+          <td><div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email ,size: 18 %>
+  </div></td>
+
+          <td><div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.text_field :sexo ,size: 1 %>
+  </div></td>
+
+          <td><div class="field">
+    <%= f.label :fecha_ultimo_contacto %><br>
+    <%= f.date_select :fecha_ultimo_contacto %>
+  </div></td>
+
+          <td><div class="field">
+    <%= f.label :intencion %><br>
+    <%= f.check_box :intesion %>
+  </div></td>
+
+      </tr>
+
+  </tbody>
+</table>
+
+
+
+
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+
+
+<h2>Contactos</h2>
+<% i=0%>
+<table>
+  <thead>
     <tr>
+    <th>#</th>
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Cedula</th>
@@ -43,7 +135,6 @@
       <th>Telefono</th>
       <th>Mesa</th>
       <th>Paraje</th>
-        <th>Email</th>
         <th>Sexo</th>
         <th>Intencion</th>
         <th>Fecha ult contacto</th>
@@ -54,7 +145,10 @@
 
   <tbody>
     <% @enc_contacto.contactos.each do |contacto| %>
+      <%if contacto.id != nil%>
       <tr>
+
+        <td><%= i=i+1 %></td>
         <td><%= contacto.nombre %></td>
         <td><%= contacto.apellido %></td>
         <td><%= contacto.cedula %></td>
@@ -62,7 +156,6 @@
         <td><%= contacto.telefono %></td>
         <td><%= contacto.mesa %></td>
           <td><%= contacto.paraje %></td>
-          <td><%= contacto.email %></td>
           <td><%= contacto.sexo %></td>
           <td><%= contacto.intesion %></td>
         <td><%= contacto.fecha_ultimo_contacto %></td>
@@ -70,69 +163,10 @@
           <td><%= link_to 'Destroy', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
-
-<h3>Agregar un Contacto</h3>
-<%= form_for([@enc_contacto, @enc_contacto.contactos.build]) do |f| %>
-
-   <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :apellido %><br>
-    <%= f.text_field :apellido %>
-  </div>
-  <div class="field">
-    <%= f.label :cedula %><br>
-    <%= f.text_field :cedula %>
-  </div>
-  <div class="field">
-    <%= f.label :celular %><br>
-    <%= f.text_field :celular %>
-  </div>
-  <div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
-  </div>
-  <div class="field">
-    <%= f.label :mesa %><br>
-    <%= f.text_field :mesa %>
-  </div>
-  <div class="field">
-    <%= f.label :paraje %><br>
-    <%= f.text_field :paraje %>
-  </div>
-
-    <div class="field">
-    <%= f.label :edad %><br>
-    <%= f.text_field :edad %>
-  </div>
-<div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-<div class="field">
-    <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
-  </div>
-<div class="field">
-    <%= f.label :fecha_ultimo_contacto %><br>
-    <%= f.date_select :fecha_ultimo_contacto %>
-  </div>
-<div class="field">
-    <%= f.label :intencion %><br>
-    <%= f.check_box :intesion %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <% end %>
-
 
 
 

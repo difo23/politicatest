@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+				background-color:	#FFFFFF;
+				color:	#333333;
+				font-family:	"Helvetica	Neue",Helvetica,Arial,sans-serif;
+				font-size:	14px;
+				line-height:	1.42857;
+}
+body	{
+				margin:	auto;
+				width:	970px;
+}
+table{
+	 width:	100%;
+	 text-align:	left;
+}
+td{
+	 border-top:	1px	solid	#DDDDDD;
+}

@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
+<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+<span id="clock" >&nbsp;</span>
 <%= yield %>
 
 </body>

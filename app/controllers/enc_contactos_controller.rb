@@ -1,6 +1,6 @@
 class EncContactosController < ApplicationController
   before_action :set_enc_contacto, only: [:show, :edit, :update, :destroy]
-
+    http_basic_authenticate_with name: "difo", password: "difo", only: :destroy
   # GET /enc_contactos
   # GET /enc_contactos.json
   def index
@@ -10,6 +10,7 @@ class EncContactosController < ApplicationController
   # GET /enc_contactos/1
   # GET /enc_contactos/1.json
   def show
+        @contacto= @enc_contacto.contactos.build
   end
 
   # GET /enc_contactos/new
@@ -54,10 +55,10 @@ class EncContactosController < ApplicationController
   # DELETE /enc_contactos/1
   # DELETE /enc_contactos/1.json
   def destroy
-   @enc_contacto.contactos.each do |contacto|
-       contacto.destroy
+   #@enc_contacto.contactos.each do |contacto|
+    #   contacto.destroy
 
-   end
+   #end
     @enc_contacto.destroy
 
     respond_to do |format|
