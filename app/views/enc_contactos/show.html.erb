@@ -31,95 +31,7 @@
 
   </tbody>
 </table>
-<h3>Agregar un Contacto</h3>
-<%= form_for([@enc_contacto, (contacto=@enc_contacto.contactos.build)]) do |f| %>
 
-<% if contacto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(contacto.errors.count, "error") %> prohibited this contacto from being saved:</h2>
-
-      <ul>
-      <% contacto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-<table>
-  <thead>
-  </thead>
-
-  <tbody>
-
-      <tr>
-        <td>  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre ,size: 15 %>
-  </div></td>
-        <td><div class="field">
-    <%= f.label :apellido %><br>
-    <%= f.text_field :apellido ,size: 15 %>
-  </div></td>
-        <td> <div class="field">
-    <%= f.label :cedula %><br>
-    <%= f.text_field :cedula ,size: 11 %>
-  </div></td>
-        <td> <div class="field">
-    <%= f.label :celular %><br>
-    <%= f.text_field :celular ,size: 10 %>
-  </div></td>
-        <td><div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono,size: 10 %>
-  </div></td>
-        <td><div class="field">
-    <%= f.label :mesa %><br>
-    <%= f.text_field :mesa ,size: 4 %>
-  </div></td>
-        <td><div class="field">
-    <%= f.label :paraje %><br>
-    <%= f.text_field :paraje ,size: 15 %>
-  </div></td>
-          <td><div class="field">
-    <%= f.label :edad %><br>
-    <%= f.text_field :edad, size: 2 %>
-  </div></td>
-
-          <td><div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email ,size: 18 %>
-  </div></td>
-
-          <td><div class="field">
-    <%= f.label :sexo %><br>
-    <%= f.text_field :sexo ,size: 1 %>
-  </div></td>
-
-          <td><div class="field">
-    <%= f.label :fecha_ultimo_contacto %><br>
-    <%= f.date_select :fecha_ultimo_contacto %>
-  </div></td>
-
-          <td><div class="field">
-    <%= f.label :intencion %><br>
-    <%= f.check_box :intesion %>
-  </div></td>
-
-      </tr>
-
-  </tbody>
-</table>
-
-
-
-
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-  <% end %>
 
 
 
@@ -170,7 +82,7 @@
 </table>
 
 
-
+<%= link_to 'Agregar Contacto', "/enc_contactos/#{@enc_contacto.id}/contactos/new" %> |
 
 
 <%= link_to 'Back', enc_contactos_path %>

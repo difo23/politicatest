@@ -4,7 +4,11 @@ class ContactosController < ApplicationController
 
   end
 
-
+ # GET /enc_contactos/new
+  def new
+        @enc_contacto = EncContacto.find(params[:enc_contacto_id])
+      @contacto = @enc_contacto.contactos.new
+  end
 
   def edit
       @contacto = Contacto.find(params[:id])
@@ -32,12 +36,15 @@ class ContactosController < ApplicationController
         @enc_contacto = EncContacto.find(params[:enc_contacto_id])
         @contacto = @enc_contacto.contactos.create(contacto_params)
 
-        if @contacto.id != nil
-                redirect_to enc_contacto_path(@enc_contacto), notice: 'contacto was successfully created.'
+    respond_to do |format|
+      if @contacto.save
+          format.html { redirect_to "/enc_contactos/#{@enc_contacto.id}/contactos/new", notice: 'Contacto was successfully created. Nombre: '+@contacto.nombre+' Cedula: '+@contacto.cedula }
+        #format.json { render :show, status: :created, location: @contacto }
       else
-
-            redirect_to enc_contacto_path(@enc_contacto), error: 'Contacto error, puede ser: la cedula ya fue registrada o cedula caracteres != 11 o mesa caracteres != 4 o sexo M o F.'
+        format.html { render :new }
+        #format.json { render json: @contacto.errors, status: :unprocessable_entity }
       end
+    end
 
 
   end
