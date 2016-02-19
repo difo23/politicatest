@@ -1,7 +1,12 @@
-<p id="notice"><%= notice %></p>
+
 <h3>Editar un Contacto</h3>
 
 <%= form_for(@contacto, url: "/enc_contactos/#{@enc_contacto.id}/contactos/#{@contacto.id}" , html: {method: "patch"}) do |f| %>
+
+<table>
+  <thead>
+     <tr>
+ <td>
 
 <% if @contacto.errors.any? %>
     <div id="error_explanation">
@@ -15,61 +20,149 @@
     </div>
   <% end %>
 
+   </td></tr>
+</thead>
+ <tbody>
 
-
+     <tr>
+              <td>
    <div class="field">
     <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
   </div>
+
+         </td>
+     </tr>
+
+    <tr>
+              <td>
   <div class="field">
     <%= f.label :apellido %><br>
     <%= f.text_field :apellido %>
   </div>
+
+                   </td>
+     </tr>
+
+     <tr>
+              <td>
   <div class="field">
     <%= f.label :cedula %><br>
     <%= f.text_field :cedula %>
   </div>
+                   </td>
+     </tr>
+
+     <tr>
+              <td>
   <div class="field">
     <%= f.label :celular %><br>
     <%= f.text_field :celular %>
   </div>
+
+                  </td>
+     </tr>
+
+     <tr>
+              <td>
   <div class="field">
     <%= f.label :telefono %><br>
     <%= f.text_field :telefono %>
   </div>
+
+                   </td>
+     </tr>
+
+  <tr>
+              <td>
   <div class="field">
     <%= f.label :mesa %><br>
     <%= f.text_field :mesa %>
   </div>
+
+
+                      </td>
+     </tr>
+
+
+     <tr>
+              <td>
   <div class="field">
     <%= f.label :paraje %><br>
     <%= f.text_field :paraje %>
   </div>
 
+
+                      </td>
+     </tr>
+
+     <tr>
+              <td>
     <div class="field">
     <%= f.label :edad %><br>
     <%= f.text_field :edad %>
   </div>
+
+
+                      </td>
+     </tr>
+ <tr>
+              <td>
 <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+
+
+                      </td>
+     </tr>
+
+     <tr>
+              <td>
 <div class="field">
     <%= f.label :sexo %><br>
     <%= f.text_field :sexo %>
   </div>
+
+                      </td>
+     </tr>
+      <tr>
+              <td>
 <div class="field">
     <%= f.label :fecha_ultimo_contacto %><br>
     <%= f.date_select :fecha_ultimo_contacto %>
   </div>
+
+
+
+                      </td>
+     </tr>
+
+      <tr>
+              <td>
 <div class="field">
     <%= f.label :intencion %><br>
     <%= f.check_box :intesion %>
   </div>
 
+    </td>
+     </tr>
 
+
+<tr>
+              <td>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+</td>
+ <td>
+     <%= link_to 'Volver', @enc_contacto %>
+    </td>
+
+      </tr>
+
+    </tbody>
+</table>
+
   <% end %>
-<%= link_to 'Back', @enc_contacto %>

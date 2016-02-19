@@ -2,17 +2,42 @@
 <html>
 <head>
   <title>Politica</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body >
 
 
 
 
-        <%= yield %>
+<div class="wrapper">
+			<div class="content">
+
+				<div id="form_wrapper" class="form_wrapper">
+
+                    <img src="/images/EQUIPO3.png" alt="Equipo3" />
+                        <div class="boxview">
+
+                                        <%= yield %>
+
+                            <div class="bottom">
+<p >Partido de la Liberacion Dominicana (PLD) Distrito Municipal De Rio Verde, La Vega, Rep. Dom.</p>
+							<div class="clear"> </div>
+
+</div>
+                        		</div>
+
+</div>
+
+				<div class="clear"></div>
+			</div>
 
 
+		</div>
 </body>
 </html>

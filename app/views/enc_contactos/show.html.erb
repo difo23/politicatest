@@ -1,7 +1,9 @@
+
+
+<h3> Encargado de Contactos</h3>
+
 <p id="notice"><%= notice %></p>
 <p id="error" ><font color= "red"><%= error %></font></p>
-
-<h1> Encargado de Contactos</h1>
 <table>
   <thead>
     <tr>
@@ -12,7 +14,7 @@
       <th>Telefono</th>
       <th>Mesa</th>
       <th>Paraje</th>
-      <th colspan="3"></th>
+
     </tr>
   </thead>
 
@@ -35,7 +37,7 @@
 
 
 
-<h2>Contactos</h2>
+<h3>Contactos</h3>
 <% i=0%>
 <table>
   <thead>
@@ -50,7 +52,7 @@
       <th>Paraje</th>
         <th>Sexo</th>
         <th>Intencion</th>
-        <th>Fecha ult contacto</th>
+        <th>Fecha de ultimo contacto</th>
 
       <th colspan="3"></th>
     </tr>
@@ -72,17 +74,19 @@
           <td><%= contacto.sexo %></td>
           <td><%= contacto.intesion %></td>
         <td><%= contacto.fecha_ultimo_contacto %></td>
-          <td><%= link_to 'Edit', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}/edit" %></td>
-          <td><%= link_to 'Destroy', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Editar', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}/edit" %></td>
+          <td><%= link_to 'Borrar', "/enc_contactos/#{@enc_contacto.id}/contactos/#{contacto.id}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
       </tr>
       <% end %>
+
     <% end %>
+      <tr><td><%= link_to 'Agregar nuevo', "/enc_contactos/#{@enc_contacto.id}/contactos/new" %></td>
+          <td><%= link_to 'Volver a Encargados', enc_contactos_path %></td>
+      </tr>
   </tbody>
 </table>
 
 
-<%= link_to 'Agregar Contacto', "/enc_contactos/#{@enc_contacto.id}/contactos/new" %> |
 
 
-<%= link_to 'Back', enc_contactos_path %>

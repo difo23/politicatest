@@ -1,7 +1,14 @@
 <%= form_for(@enc_contacto) do |f| %>
-  <% if @enc_contacto.errors.any? %>
+
+
+
+<table>
+  <thead>
+     <tr>
+
+         <td>Formulario: <% if @enc_contacto.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@enc_contacto.errors.count, "error") %> prohibited this enc_contacto from being saved:</h2>
+      <h2><%= pluralize(@enc_contacto.errors.count, "Falla") %> estas impiden que el nuevo encargado de contacto sea creado:</h2>
 
       <ul>
       <% @enc_contacto.errors.full_messages.each do |message| %>
@@ -10,36 +17,110 @@
       </ul>
     </div>
   <% end %>
+      </td></tr>
+    </thead>
 
-  <div class="field">
-    <%= f.label :nombre %><br>
-    <%= f.text_field :nombre %>
-  </div>
-  <div class="field">
-    <%= f.label :apellido %><br>
-    <%= f.text_field :apellido %>
-  </div>
-  <div class="field">
-    <%= f.label :cedula %><br>
-    <%= f.text_field :cedula %>
-  </div>
-  <div class="field">
-    <%= f.label :celular %><br>
-    <%= f.text_field :celular %>
-  </div>
-  <div class="field">
-    <%= f.label :telefono %><br>
-    <%= f.text_field :telefono %>
-  </div>
-  <div class="field">
-    <%= f.label :mesa %><br>
-    <%= f.text_field :mesa %>
-  </div>
-  <div class="field">
-    <%= f.label :paraje %><br>
-    <%= f.text_field :paraje %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+    <tbody>
+
+          <tr>
+              <td>
+                    <div class="field">
+                        <%= f.label :nombre %><br>
+                        <%= f.text_field :nombre ,size: 15 %>
+                    </div>
+                </td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>
+                <div class="field">
+                    <%= f.label :apellido %><br>
+                    <%= f.text_field :apellido %>
+                </div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <div class="field">
+                    <%= f.label :telefono %><br>
+                    <%= f.text_field :telefono %>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <td>
+                <div class="field">
+                    <%= f.label :mesa %><br>
+                    <%= f.text_field :mesa %>
+                </div>
+            </td>
+        </tr>
+
+         <tr>
+             <td>
+                 <div class="field">
+                    <%= f.label :cedula %><br>
+                    <%= f.text_field :cedula %>
+                </div>
+            </td>
+        </tr>
+
+            <tr>
+                <td>
+                    <div class="field">
+                        <%= f.label :paraje %><br>
+                        <%= f.text_field :paraje %>
+                    </div>
+                </td>
+            </tr>
+
+        <tr>
+            <td>
+                <div class="field">
+                    <%= f.label :celular %><br>
+                    <%= f.text_field :celular %>
+                </div>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <div class="actions">
+                    <%= f.submit %>
+                </div>
+            </td>
+
+            <td>
+                <%= link_to 'Volver a Encargados', enc_contactos_path %>
+            </td>
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <% end %>
