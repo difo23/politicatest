@@ -27,7 +27,7 @@
      <tr>
               <td>
    <div class="field">
-    <%= f.label :nombre %><br>
+   <%= f.label :nombre %><br>
     <%= f.text_field :nombre %>
   </div>
 
@@ -77,7 +77,7 @@
               <td>
   <div class="field">
     <%= f.label :mesa %><br>
-    <%= f.text_field :mesa %>
+     <%= f.select :mesa, ['0069', '069A','0252','0307','0226','0325','0073','0074','0077','0075','0076','0271','0072','0225','0306','065A','0065','0070','0224','0308','0067','0068','068A','0066','0071','0079','0078','0081','080A','0080','0082','0083','0358']%>
   </div>
 
 
@@ -89,7 +89,7 @@
               <td>
   <div class="field">
     <%= f.label :paraje %><br>
-    <%= f.text_field :paraje %>
+   <%= f.select :paraje, ['Rio Verde Arriba', 'Rio Verde Abajo','Arrollo Hondo Arriba','Manga Larga','Naranjal','Mirador','Pueblo Viejo','Bonagua','Romero','La Vereda','La Rosa','La Lima']%>
   </div>
 
 
@@ -121,7 +121,7 @@
               <td>
 <div class="field">
     <%= f.label :sexo %><br>
-    <%= f.text_field :sexo %>
+   <%= f.select :sexo, ['M', 'F']%>
   </div>
 
                       </td>
