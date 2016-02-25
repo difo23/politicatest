@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-        <th>ID:</th>
+      <th>ID:</th>
       <th>Nombre:</th>
       <th>Apellido:</th>
       <th>Cedula:</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @enc_contactos.each do |enc_contacto| %>
       <tr>
-          <td><%= enc_contacto.id %></td>
+        <td><%= enc_contacto.id %></td>
         <td><%= enc_contacto.nombre %></td>
         <td><%= enc_contacto.apellido %></td>
         <td><%= enc_contacto.cedula %></td>
@@ -27,21 +27,21 @@
         <td><%= enc_contacto.mesa %></td>
         <td><%= enc_contacto.paraje %></td>
         <td><%= link_to 'Mostrar', enc_contacto %></td>
-          <td><%= link_to 'Editar', edit_enc_contacto_path(enc_contacto) %></td>
-          <td><%= link_to 'Borrar', enc_contacto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_enc_contacto_path(enc_contacto) %></td>
+        <td><%= link_to 'Borrar', enc_contacto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
       <tr><td><%= link_to 'Agregar nuevo', new_enc_contacto_path %></td></tr>
   </tbody>
 </table>
 
-<h3>Estadisticas Elecciones 2016 Equipo Politico Prof. Antonio Ramirez </h3>
+
 
 <div>
 
          <table>
              <thead>
-
+                 <h3>Estadisticas Elecciones 2010 y 2012 Equipo Politico Prof. Antonio Ramirez </h3>
                  <tr>
                     <th>Paraje:</th>
                     <th>Inscritos 2012:</th>
@@ -60,19 +60,17 @@
              <tbody>
 
              <tr>
-                    <td>Rio Verde Abajo</td>
-                    <td>3166</td>
-                     <td>2253</td>
-                    <td>21.26%</td>
+                 <td>Rio Verde Abajo</td>
+                 <td>3166</td>
+                 <td>2253</td>
+                 <td>21.26%</td>
                  <td>3424</td>
                  <td>1713</td>
                  <td>1711</td>
                  <td>1683</td>
                  <td>1741</td>
                  <td> 3100</td>
-
-
-                 </tr>
+            </tr>
 
 
 
@@ -81,37 +79,35 @@
                     <td>2129</td>
                     <td>1520</td>
                     <td>13.51%</td>
-                     <td>1856</td>
-                     <td>953</td>
-                     <td>903</td>
-                     <td>968</td>
-                     <td>888</td>
-                     <td>1630</td>
+                    <td>1856</td>
+                    <td>953</td>
+                    <td>903</td>
+                    <td>968</td>
+                    <td>888</td>
+                    <td>1630</td>
                  </tr>
 
                  <tr>
                     <td>Mirador</td>
-
                     <td>529</td>
                     <td>369</td>
                     <td>3.55%</td>
-                     <td>540</td>
-                 <td>-</td>
-                 <td>-</td>
-                 <td>-</td>
-                 <td>-</td>
-                 <td>-</td>
+                    <td>540</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
                  </tr>
 
 
                  <tr>
                     <td>Pueblo Viejo</td>
-
                     <td>1237</td>
                     <td>893</td>
                     <td>8.3%</td>
-                <td>1215</td>
-                 <td>593</td>
+                    <td>1215</td>
+                    <td>593</td>
                  <td>622</td>
                  <td>540</td>
                  <td>675</td>
@@ -261,6 +257,453 @@
 </div>
 
 
+<div>
+
+         <table>
+             <thead>
+                 <h3>Estadisticas Elecciones 2016 Equipo Politico Prof. Antonio Ramirez </h3>
+
+                 <tr>
+                    <th>Paraje:</th>
+                     <th>Mesa:</th>
+                      <th>Inscritos 2016:</th>
+                    <th>Inscritos 2012:</th>
+                     <th>Votos 2012:</th>
+
+                </tr>
+
+
+             </thead>
+             <tbody>
+
+                <tr>
+                    <td>Rio Verde Abajo</td>
+                    <td>0073</td>
+                    <td>507</td>
+                    <td>501</td>
+                    <td>348</td>
+
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0074</td>
+                    <td>502</td>
+                    <td>502</td>
+                    <td>356</td>
+
+                 </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>0075</td>
+                    <td>547</td>
+                    <td>517</td>
+                    <td>342</td>
+
+                 </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>0076</td>
+                    <td>536</td>
+                    <td>503</td>
+                    <td>366</td>
+
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0077</td>
+                    <td>504</td>
+                    <td>522</td>
+                    <td>370</td>
+                 </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td>0226</td>
+                    <td>515</td>
+                    <td>513</td>
+                    <td>370</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0325</td>
+                    <td>504</td>
+                    <td>108</td>
+                    <td>101</td>
+                 </tr>
+
+                 <tr>
+                     <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>3615</strong></td>
+                    <td><strong>3166</strong></td>
+                    <td><strong>2253</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>Rio Verde Arriba</td>
+                    <td>0069</td>
+                    <td>600</td>
+                    <td>552</td>
+                    <td>389</td>
+
+                 </tr>
+
+
+                 <tr>
+                    <td></td>
+                    <td>069A</td>
+                    <td>600</td>
+                    <td>550</td>
+                    <td>365</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0252</td>
+                    <td>587</td>
+                    <td>552</td>
+                    <td>361</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0307</td>
+                    <td>599</td>
+                    <td>475</td>
+                    <td>405</td>
+                 </tr>
+
+
+                 <tr>
+                    <td></td>
+                    <td>0358</td>
+                    <td>299</td>
+                    <td>0</td>
+                    <td>0</td>
+                 </tr>
+
+                   <tr>
+                     <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>2685</strong></td>
+                    <td><strong>2129</strong></td>
+                    <td><strong>1520</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>Mirador</td>
+
+                    <td>0082</td>
+                    <td>542</td>
+                    <td>529</td>
+                     <td>369</td>
+
+                 </tr>
+                <tr>
+                    <td></td>
+                    <td>0346</td>
+                    <td>85</td>
+                    <td>0</td>
+                    <td>0</td>
+                 </tr>
+
+                   <tr>
+                     <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>597</strong></td>
+                    <td><strong>529</strong></td>
+                    <td><strong>369</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>Pueblo Viejo</td>
+                    <td>0070</td>
+                    <td>585</td>
+                    <td>564</td>
+                    <td>393</td>
+                 </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>0224</td>
+                    <td>541</td>
+                    <td>537</td>
+                    <td>383</td>
+                 </tr>
+
+                  <tr>
+                    <td></td>
+                    <td>0308</td>
+                    <td>409</td>
+                    <td>136</td>
+                    <td>117</td>
+                 </tr>
+
+                   <tr>
+                     <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1535</strong></td>
+                    <td><strong>1237</strong></td>
+                    <td><strong>893</strong></td>
+                 </tr>
+
+
+
+                 <tr>
+                    <td>Bonagua</td>
+                    <td>0065</td>
+                    <td>533</td>
+                    <td>546</td>
+                    <td>412</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>065A</td>
+                    <td>557</td>
+                    <td>573</td>
+                    <td>457</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0306</td>
+                    <td>382</td>
+                    <td>181</td>
+                    <td>164</td>
+                 </tr>
+
+                   <tr>
+                     <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1472</strong></td>
+                    <td><strong>1300</strong></td>
+                    <td><strong>1033</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>Romero</td>
+                    <td>0066</td>
+                    <td>543</td>
+                    <td>465</td>
+                    <td>361</td>
+                 </tr>
+
+                 <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>543</strong></td>
+                    <td><strong>465</strong></td>
+                    <td><strong>361</strong></td>
+                 </tr>
+
+
+                 <tr>
+                    <td>La Vereda</td>
+                    <td>0071</td>
+                    <td>507</td>
+                    <td>559</td>
+                    <td>430</td>
+                 </tr>
+
+                <tr>
+                    <td></td>
+                    <td>0324</td>
+                    <td>97</td>
+                    <td>0</td>
+                    <td>0</td>
+                 </tr>
+
+                   <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>604</strong></td>
+                    <td><strong>559</strong></td>
+                    <td><strong>430</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>La Rosa</td>
+                    <td>0083</td>
+                    <td>161</td>
+                    <td>191</td>
+                    <td>142</td>
+                 </tr>
+
+
+                   <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>161</strong></td>
+                    <td><strong>191</strong></td>
+                    <td><strong>142</strong></td>
+                 </tr>
+
+
+                 <tr>
+                    <td>Manga Larga</td>
+                    <td>0067</td>
+                    <td>544</td>
+                    <td>492</td>
+                    <td>361</td>
+                 </tr>
+
+
+                  <tr>
+                    <td></td>
+                    <td>0068</td>
+                    <td>544</td>
+                    <td>498</td>
+                    <td>387</td>
+                 </tr>
+
+
+                  <tr>
+                    <td></td>
+                    <td>068A</td>
+                    <td>545</td>
+                    <td>476</td>
+                    <td>360</td>
+                 </tr>
+
+
+                   <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1633</strong></td>
+                    <td><strong>1466</strong></td>
+                    <td><strong>1108</strong></td>
+                 </tr>
+
+
+                 <tr>
+                    <td>Naranjal</td>
+                    <td>0080</td>
+                    <td>547</td>
+                    <td>509</td>
+                    <td>383</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>080A</td>
+                    <td>547</td>
+                    <td>497</td>
+                    <td>400</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0081</td>
+                    <td>549</td>
+                    <td>497</td>
+                    <td>417</td>
+                 </tr>
+
+
+                   <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1643</strong></td>
+                    <td><strong>1503</strong></td>
+                    <td><strong>1200</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>La Lima</td>
+                    <td>0078</td>
+                    <td>516</td>
+                    <td>621</td>
+                    <td>443</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0079</td>
+                    <td>534</td>
+                    <td>551</td>
+                    <td>496</td>
+                 </tr>
+
+                 <tr>
+                    <td></td>
+                    <td>0315</td>
+                    <td>237</td>
+                    <td>0</td>
+                    <td>0</td>
+                 </tr>
+
+
+                   <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1287</strong></td>
+                    <td><strong>1172</strong></td>
+                    <td><strong>939</strong></td>
+                 </tr>
+
+                 <tr>
+                    <td>Arroyo Hondo</td>
+                    <td>0072</td>
+                    <td>374</td>
+                    <td>429</td>
+                    <td>307</td>
+                 </tr>
+
+
+                 <tr>
+                    <td></td>
+                    <td>0225</td>
+                    <td>447</td>
+                    <td>511</td>
+                    <td>377</td>
+                 </tr>
+
+                <tr>
+                    <td></td>
+                    <td>0271</td>
+                    <td>328</td>
+                    <td>235</td>
+                    <td>204</td>
+                 </tr>
+
+                 <tr>
+                    <td><strong>Total Centro:</strong></td>
+                    <td></td>
+                    <td><strong>1149</strong></td>
+                    <td><strong>1175</strong></td>
+                    <td><strong>888</strong></td>
+                 </tr>
+
+                <tr>
+                    <td>Total DM:</td>
+                    <td>Mesas 36</td>
+                    <td>16954</td>
+                    <td>14892</td>
+                    <td>11136-74.78%</td>
+                 </tr>
+
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>74.78%-12678</td>
+                    <td></td>
+                    <td></td>
+                 </tr>
+             </tbody>
+         </table>
+
+
+
+
+
+</div>
 
 <div>
 
@@ -275,6 +718,22 @@
 
           </tr>
           <tr>
+
+              <td>
+              </td>
+          </tr>
+           <tr>
+               <tr>
+
+              <td>     <h3> Contactados con intencion de voto por Paraje 2016:</h3>
+                  <%= column_chart Contacto.group(:paraje , :intesion).count %>
+              </td>
+
+          </tr>
+          <tr>
+
+
+               <tr>
 
               <td>
               </td>
